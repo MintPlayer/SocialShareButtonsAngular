@@ -1,0 +1,20 @@
+<table *ngIf="person !== null">
+    <tr>
+        <td><b>ID</b></td>
+        <td>{{ person.id }}</td>
+    </tr>
+    <tr>
+        <td><b>First name</b></td>
+        <td>{{ person.firstname }}</td>
+    </tr>
+    <tr>
+        <td><b>Last name</b></td>
+        <td>{{ person.lastname }}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <app-facebook-share [routerLink]='["/person",person.id]' class="m-1"></app-facebook-share>
+            <app-twitter-share [routerLink]='["/person",person.id]' [text]="'Share person'" class="m-1"></app-twitter-share>
+        </td>
+    </tr>
+</table>
